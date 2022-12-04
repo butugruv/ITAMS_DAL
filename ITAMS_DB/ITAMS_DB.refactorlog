@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="59dc28aa-dd7e-42a7-9425-2953613ad25f" ChangeDateTime="12/04/2022 04:00:53">
+    <Property Name="ElementName" Value="[dbo].[Devices].[floor]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Devices]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="location_floor_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c33d3cad-155d-48ff-b561-0dd6695f6aaf" ChangeDateTime="12/04/2022 04:18:04">
+    <Property Name="ElementName" Value="[dbo].[Device_Software].[software_name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Device_Software]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="device_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7ebc3294-34c9-43f6-a61e-a8cc08d38d4b" ChangeDateTime="12/04/2022 04:18:12">
+    <Property Name="ElementName" Value="[dbo].[Device_Software].[version]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Device_Software]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="software_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5cb8816d-f4bb-41de-83e4-50071176d867" ChangeDateTime="12/04/2022 04:22:36">
+    <Property Name="ElementName" Value="[dbo].[Device_Types].[type_description_tx]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Device_Types]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="type_description" />
+  </Operation>
+</Operations>
