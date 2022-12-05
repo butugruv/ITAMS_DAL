@@ -1,10 +1,10 @@
 ﻿CREATE TABLE [dbo].[Device_Types]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [type_name] NVARCHAR(50) NOT NULL, 
-    [type_description] NVARCHAR(50) NULL, 
-    [created_dt] DATETIME2 NULL, 
-    [created_by] NVARCHAR(50) NULL, 
-    [modified_dt] DATETIME2 NULL, 
-    [modified_by] NVARCHAR(50) NULL
+    [TypeName] NVARCHAR(50) NOT NULL, 
+    [TypeDescription] NVARCHAR(50) NULL, 
+    [CreatedDate] DATETIME2 NULL, 
+    [CreatedBy] NVARCHAR(50) NULL, 
+    [ModifiedDate] DATETIME2 NULL, 
+    [ModifiedBy] NVARCHAR(50) NULL
 )
