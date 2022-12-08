@@ -5,7 +5,7 @@
     [DeviceFunction] NVARCHAR(4000) NOT NULL, 
     [DeviceTypeId] INT NOT NULL, 
     [ManufacturerId] INT NULL, 
-    [Poc] NCHAR(10) NOT NULL, 
+    [Poc] NVARCHAR(50) NOT NULL, 
     [CreatedDate] DATETIME2 NOT NULL, 
     [CreatedBy] NVARCHAR(50) NOT NULL, 
     [ModifiedDate] DATETIME2 NULL, 

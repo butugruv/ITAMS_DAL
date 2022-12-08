@@ -78,6 +78,9 @@
     <Build Include="dbo\Tables\Scan_Groups.sql" />
     <Build Include="dbo\Stored Procedures\spDevices_GetAll.sql" />
     <Build Include="dbo\Stored Procedures\spDeviceTypes_GetAll.sql" />
+    <Build Include="dbo\Views\Devices_with_lookups_vw.sql" />
+    <Build Include="dbo\Stored Procedures\spDevicesWithLookups_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\spDevices_GetById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITAMS_DB.refactorlog" />
