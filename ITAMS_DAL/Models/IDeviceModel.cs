@@ -12,7 +12,7 @@
         int LocationFloorRoomId { get; set; }
         int LocationId { get; set; }
         int ManufacturerId { get; set; }
-        string model { get; set; }
+        string Model { get; set; }
         string ModifiedBy { get; set; }
         DateTime ModifiedDate { get; set; }
         string Poc { get; set; }

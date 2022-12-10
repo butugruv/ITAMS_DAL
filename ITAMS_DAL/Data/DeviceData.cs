@@ -37,5 +37,27 @@ namespace ITAMS_DAL.Data
         {
             await _dataAccess.SaveData("dbo.spDevices_Update", device, _connectionString.SqlConnectionName);
         }
+
+        public async Task CreateDevice(IDeviceModel device)
+        {
+            var deviceParameters = new
+            {
+                device.DeviceName,
+                device.DeviceFunction,
+                device.DeviceTypeId,
+                device.ManufacturerId,
+                device.Poc,
+                device.LocationId,
+                device.LocationFloorId,
+                device.LocationFloorRoomId,
+                device.RmfPackageId,
+                device.Model,
+                device.CreatedDate,
+                device.CreatedBy
+
+            };
+
+            await _dataAccess.SaveData("dbo.spDevices_Create", deviceParameters, _connectionString.SqlConnectionName);
+        }
     }
 }

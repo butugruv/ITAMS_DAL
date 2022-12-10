@@ -16,6 +16,6 @@
         public int LocationFloorId { get; set; }
         public int LocationFloorRoomId { get; set; }
         public int RmfPackageId { get; set; }
-        public string model { get; set; }
+        public string Model { get; set; }
     }
 }

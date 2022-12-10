@@ -8,7 +8,9 @@
 	@LocationFloorId int,
 	@LocationFloorRoomId int,
 	@RmfPackageId int,
-	@Model nvarchar(50)
+	@Model nvarchar(50),
+	@CreatedDate datetime2(7),
+	@CreatedBy nvarchar(50)
 AS
 BEGIN
 	set nocount on;
@@ -23,7 +25,9 @@ BEGIN
 		LocationFloorId,
 		LocationFloorRoomId,
 		RmfPackageId,
-		Model
+		Model,
+		CreatedDate,
+		CreatedBy
 	)
 	values (
 		@DeviceName,
@@ -35,6 +39,8 @@ BEGIN
 		@LocationFloorId,
 		@LocationFloorRoomId,
 		@RmfPackageId,
-		@Model
+		@Model,
+		@CreatedDate,
+		@CreatedBy
 	);
 END

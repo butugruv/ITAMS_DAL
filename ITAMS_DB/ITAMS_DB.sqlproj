@@ -83,6 +83,7 @@
     <Build Include="dbo\Stored Procedures\spDevices_GetById.sql" />
     <Build Include="dbo\Stored Procedures\spDevices_Create.sql" />
     <Build Include="dbo\Stored Procedures\spDevices_Update.sql" />
+    <Build Include="dbo\Stored Procedures\spDeviceIps_GetByDeviceId.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITAMS_DB.refactorlog" />
