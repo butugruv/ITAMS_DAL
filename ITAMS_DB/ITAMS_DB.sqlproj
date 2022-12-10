@@ -81,6 +81,8 @@
     <Build Include="dbo\Views\Devices_with_lookups_vw.sql" />
     <Build Include="dbo\Stored Procedures\spDevicesWithLookups_GetAll.sql" />
     <Build Include="dbo\Stored Procedures\spDevices_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\spDevices_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spDevices_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITAMS_DB.refactorlog" />

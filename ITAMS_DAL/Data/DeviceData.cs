@@ -28,11 +28,14 @@ namespace ITAMS_DAL.Data
 
         public async Task<IDeviceModel> GetDeviceById(int deviceId)
         {
-            var recs = await _dataAccess.LoadData<DeviceModel, dynamic>("dbo.spDevices_GetById",
-                new { Id = deviceId },
-                _connectionString.SqlConnectionName);
+            var recs = await _dataAccess.LoadData<DeviceModel, dynamic>("dbo.spDevices_GetById", new { Id = deviceId }, _connectionString.SqlConnectionName);
 
             return recs.FirstOrDefault();
+        }
+
+        public async Task UpdateDevice(IDeviceModel device)
+        {
+            await _dataAccess.SaveData("dbo.spDevices_Update", device, _connectionString.SqlConnectionName);
         }
     }
 }

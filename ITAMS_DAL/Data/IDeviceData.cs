@@ -7,5 +7,6 @@ namespace ITAMS_DAL.Data
         Task<IDeviceModel> GetDeviceById(int deviceId);
         Task<List<IDeviceModel>> GetDevices();
         Task<List<IDevicesWithLookupsModel>> GetDevicesWithLookups();
+        Task UpdateDevice(IDeviceModel device);
     }
 }
