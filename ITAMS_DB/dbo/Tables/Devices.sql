@@ -15,9 +15,11 @@
     [LocationFloorRoomId] INT NULL, 
     [RmfPackageId] INT NULL, 
     [Model] NVARCHAR(50) NULL, 
+    [NetworkId] INT NULL, 
     CONSTRAINT [FK_Devices_Device_Types] FOREIGN KEY ([DeviceTypeId]) REFERENCES Device_Types(Id), 
     CONSTRAINT [FK_Devices_Manufacturers] FOREIGN KEY ([ManufacturerId]) REFERENCES Manufacturers(Id), 
     CONSTRAINT [FK_Devices_Locations] FOREIGN KEY ([LocationId]) REFERENCES Locations(Id), 
     CONSTRAINT [FK_Devices_Location_Floors] FOREIGN KEY ([LocationFloorId]) REFERENCES Location_Floors(Id), 
-    CONSTRAINT [FK_Devices_Location_Floor_Rooms] FOREIGN KEY ([LocationFloorRoomId]) REFERENCES Location_Floor_Rooms(Id)
+    CONSTRAINT [FK_Devices_Location_Floor_Rooms] FOREIGN KEY ([LocationFloorRoomId]) REFERENCES Location_Floor_Rooms(Id), 
+    CONSTRAINT [FK_Devices_Networks] FOREIGN KEY (NetworkId) REFERENCES Networks(Id)
 )

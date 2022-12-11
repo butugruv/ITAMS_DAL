@@ -25,5 +25,17 @@ namespace ITAMS_DAL.Data
         {
             await _dataAccess.SaveData("dbo.spDeviceIps_Update", deviceIp, _connectionString.SqlConnectionName);
         }
+
+        public async Task CreateDeviceIp(IDeviceIpModel deviceIp)
+        {
+            var deviceIpParameters = new
+            {
+                deviceIp.DeviceId,
+                deviceIp.IpAddress,
+                deviceIp.MacAddress
+            };
+
+            await _dataAccess.SaveData("dbo.spDevices_Create", deviceIpParameters, _connectionString.SqlConnectionName);
+        }
     }
 }

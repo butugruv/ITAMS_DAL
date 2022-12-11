@@ -4,5 +4,5 @@
     [DeviceId] INT NOT NULL, 
     [IpAddress] NVARCHAR(20) NOT NULL, 
     [MacAddress] NVARCHAR(20) NULL, 
-    CONSTRAINT [FK_Device_IPs_Devices] FOREIGN KEY ([DeviceId]) REFERENCES Devices(Id)
+    CONSTRAINT [FK_Device_IPs_Devices] FOREIGN KEY ([DeviceId]) REFERENCES Devices(Id) ON DELETE CASCADE
 )
