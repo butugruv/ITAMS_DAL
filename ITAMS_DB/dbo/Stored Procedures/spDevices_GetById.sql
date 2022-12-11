@@ -16,7 +16,8 @@ BEGIN
 		[LocationFloorId], 
 		[LocationFloorRoomId], 
 		[RmfPackageId], 
-		[Model]
+		[Model],
+		[NetworkId]
 	from Devices
 	where Id = @Id;
 END

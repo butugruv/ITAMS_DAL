@@ -10,7 +10,8 @@
 	@RmfPackageId int,
 	@Model nvarchar(50),
 	@CreatedDate datetime2(7),
-	@CreatedBy nvarchar(50)
+	@CreatedBy nvarchar(50),
+	@NetworkId int
 AS
 BEGIN
 	set nocount on;
@@ -27,7 +28,8 @@ BEGIN
 		RmfPackageId,
 		Model,
 		CreatedDate,
-		CreatedBy
+		CreatedBy,
+		NetworkId
 	)
 	values (
 		@DeviceName,
@@ -41,6 +43,7 @@ BEGIN
 		@RmfPackageId,
 		@Model,
 		@CreatedDate,
-		@CreatedBy
+		@CreatedBy,
+		@NetworkId
 	);
 END

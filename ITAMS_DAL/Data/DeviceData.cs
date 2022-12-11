@@ -53,7 +53,8 @@ namespace ITAMS_DAL.Data
                 device.RmfPackageId,
                 device.Model,
                 device.CreatedDate,
-                device.CreatedBy
+                device.CreatedBy,
+                device.NetworkId
 
             };
 

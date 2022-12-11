@@ -15,6 +15,7 @@ BEGIN
 		[Floor], 
 		[Room], 
 		[PackageName], 
-		[Model]
+		[Model],
+		[NetworkName]
 	from Devices_with_lookups_vw;
 END

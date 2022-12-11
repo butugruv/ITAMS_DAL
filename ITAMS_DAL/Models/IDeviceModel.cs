@@ -17,5 +17,6 @@
         DateTime ModifiedDate { get; set; }
         string Poc { get; set; }
         int RmfPackageId { get; set; }
+        int NetworkId { get; set; }
     }
 }

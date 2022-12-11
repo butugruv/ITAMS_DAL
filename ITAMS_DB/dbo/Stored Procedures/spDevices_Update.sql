@@ -13,7 +13,8 @@
 	@LocationFloorId int,
 	@LocationFloorRoomId int,
 	@RmfPackageId int,
-	@Model nvarchar(50)
+	@Model nvarchar(50),
+	@NetworkId int
 AS
 BEGIN
 	set nocount on;
@@ -32,6 +33,7 @@ BEGIN
 		LocationFloorId = @LocationFloorId,
 		LocationFloorRoomId = @LocationFloorRoomId,
 		RmfPackageId = @RmfPackageId,
-		Model = @Model
+		Model = @Model,
+		NetworkId = @NetworkId
 	where Id = @Id;
 END

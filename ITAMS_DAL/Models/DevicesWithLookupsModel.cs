@@ -17,5 +17,6 @@
         public string Room { get; set; }
         public string PackageName { get; set; }
         public string Model { get; set; }
+        public string NetworkName { get; set; }
     }
 }

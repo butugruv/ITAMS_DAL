@@ -15,10 +15,12 @@ select devi.Id
 	,lfr.Room
 	,rmf.PackageName
 	,devi.Model
+	,netw.NetworkName
 from Devices devi
-inner join Device_Types dtype on devi.DeviceTypeId = dtype.Id
-inner join Manufacturers mfr on devi.ManufacturerId = mfr.Id
-inner join Locations loc on devi.LocationId = loc.Id
-inner join Location_Floors lflr on devi.LocationFloorId = lflr.Id
-inner join Location_Floor_Rooms lfr on devi.LocationFloorRoomId = lfr.Id
-inner join RMF_Packages rmf on devi.RmfPackageId = rmf.Id
+left join Device_Types dtype on devi.DeviceTypeId = dtype.Id
+left join Manufacturers mfr on devi.ManufacturerId = mfr.Id
+left join Locations loc on devi.LocationId = loc.Id
+left join Location_Floors lflr on devi.LocationFloorId = lflr.Id
+left join Location_Floor_Rooms lfr on devi.LocationFloorRoomId = lfr.Id
+left join RMF_Packages rmf on devi.RmfPackageId = rmf.Id
+left join Networks netw on devi.NetworkId = netw.Id

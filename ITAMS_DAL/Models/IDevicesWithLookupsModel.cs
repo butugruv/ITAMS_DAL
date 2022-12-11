@@ -17,5 +17,6 @@
         string Poc { get; set; }
         string Room { get; set; }
         string TypeName { get; set; }
+        string NetworkName { get; set; }
     }
 }
