@@ -14,19 +14,24 @@ namespace ITAMS_DAL.Data
             _connectionString = connectionString;
         }
 
-        public async Task<List<IDeviceIpModel>> GetDeviceIps(int deviceIdParameter)
+        public async Task<List<DeviceIpModel>> GetDeviceIps(int deviceIdParameter)
         {
             var ips = await _dataAccess.LoadData<DeviceIpModel, dynamic>("dbo.spDeviceIps_GetByDeviceId", new { deviceId = deviceIdParameter }, _connectionString.SqlConnectionName);
-            return ips.ToList<IDeviceIpModel>();
-
+            //return ips.ToList<IDeviceIpModel>();
+            return ips;
         }
 
-        public async Task UpdateDeviceIp(IDeviceIpModel deviceIp)
+        public async Task UpdateDeviceIp(DeviceIpModel deviceIp)
         {
             await _dataAccess.SaveData("dbo.spDeviceIps_Update", deviceIp, _connectionString.SqlConnectionName);
         }
 
-        public async Task CreateDeviceIp(IDeviceIpModel deviceIp)
+        public async Task DeleteDeviceIp(int Id)
+        {
+            await _dataAccess.SaveData("dbo.spDeviceIps_Update", Id, _connectionString.SqlConnectionName);
+        }
+
+        public async Task CreateDeviceIp(DeviceIpModel deviceIp)
         {
             var deviceIpParameters = new
             {
@@ -35,7 +40,7 @@ namespace ITAMS_DAL.Data
                 deviceIp.MacAddress
             };
 
-            await _dataAccess.SaveData("dbo.spDevices_Create", deviceIpParameters, _connectionString.SqlConnectionName);
+            await _dataAccess.SaveData("dbo.spDeviceIps_Create", deviceIpParameters, _connectionString.SqlConnectionName);
         }
     }
 }

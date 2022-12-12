@@ -38,6 +38,11 @@ namespace ITAMS_DAL.Data
             await _dataAccess.SaveData("dbo.spDevices_Update", device, _connectionString.SqlConnectionName);
         }
 
+        public async Task DeleteDevice(int Id)
+        {
+            await _dataAccess.SaveData("dbo.spDevices_Delete", Id, _connectionString.SqlConnectionName);
+        }
+
         public async Task CreateDevice(IDeviceModel device)
         {
             var deviceParameters = new

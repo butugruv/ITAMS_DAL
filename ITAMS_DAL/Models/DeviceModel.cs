@@ -25,24 +25,36 @@ namespace ITAMS_DAL.Models
         [Required]
         [Display(Name = "POC")]
         public string Poc { get; set; }
+
+        [Display(Name = "Created Date")]
         public DateTime CreatedDate { get; set; }
+
+        [Display(Name = "Created By")]
         public string CreatedBy { get; set; }
+
+        [Display(Name = "Modified Date")]
         public DateTime ModifiedDate { get; set; }
+
+        [Display(Name = "Modified By")]
         public string ModifiedBy { get; set; }
 
         [Required]
+        [Display(Name = "Location")]
         [Range(1, int.MaxValue, ErrorMessage = "Value must be greater than 0")]
         public int LocationId { get; set; }
 
         [Required]
+        [Display(Name = "Floor")]
         [Range(1, int.MaxValue, ErrorMessage = "Value must be greater than 0")]
         public int LocationFloorId { get; set; }
 
         [Required]
+        [Display(Name = "Room")]
         [Range(1, int.MaxValue, ErrorMessage = "Value must be greater than 0")]
         public int LocationFloorRoomId { get; set; }
 
         [Required]
+        [Display(Name = "RMF Package")]
         [Range(1, int.MaxValue, ErrorMessage = "Value must be greater than 0")]
         public int RmfPackageId { get; set; }
         public string Model { get; set; }
