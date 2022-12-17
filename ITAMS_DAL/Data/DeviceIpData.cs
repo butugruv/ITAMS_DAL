@@ -26,9 +26,9 @@ namespace ITAMS_DAL.Data
             await _dataAccess.SaveData("dbo.spDeviceIps_Update", deviceIp, _connectionString.SqlConnectionName);
         }
 
-        public async Task DeleteDeviceIp(int Id)
+        public async Task DeleteDeviceIp(int id)
         {
-            await _dataAccess.SaveData("dbo.spDeviceIps_Delete", Id, _connectionString.SqlConnectionName);
+            await _dataAccess.SaveData("dbo.spDeviceIps_Delete", new { Id = id }, _connectionString.SqlConnectionName);
         }
 
         public async Task CreateDeviceIp(DeviceIpModel deviceIp)

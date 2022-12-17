@@ -2,6 +2,6 @@
 	@Id int
 AS
 BEGIN
-	delete from Devices
-	where Id = @id;
+	delete from Device_IPs
+	where Id = @Id;
 END

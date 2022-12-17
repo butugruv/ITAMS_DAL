@@ -14,10 +14,10 @@ namespace ITAMS_DAL.Data
             _connectionString = connectionString;
         }
 
-        public async Task<List<IDeviceTypeModel>> GetDeviceTypes()
+        public async Task<List<DeviceTypeModel>> GetDeviceTypes()
         {
             var deviceTypes = await _dataAccess.LoadData<DeviceTypeModel, dynamic>("dbo.spDeviceTypes_GetAll", new { }, _connectionString.SqlConnectionName);
-            return deviceTypes.ToList<IDeviceTypeModel>();
+            return deviceTypes;
         }
 
         public async Task CreateDeviceType(DeviceTypeModel deviceType)
@@ -36,6 +36,11 @@ namespace ITAMS_DAL.Data
         public async Task UpdateDeviceType(DeviceTypeModel deviceType)
         {
             await _dataAccess.SaveData("dbo.spDeviceTypes_Update", deviceType, _connectionString.SqlConnectionName);
+        }
+
+        public async Task DeleteDeviceType(int id)
+        {
+            await _dataAccess.SaveData("dbo.spDeviceTypes_Delete", new { Id = id }, _connectionString.SqlConnectionName);
         }
     }
 }

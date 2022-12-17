@@ -4,6 +4,9 @@ namespace ITAMS_DAL.Data
 {
     public interface IDeviceTypeData
     {
-        Task<List<IDeviceTypeModel>> GetDeviceTypes();
+        Task CreateDeviceType(DeviceTypeModel deviceType);
+        Task DeleteDeviceType(int id);
+        Task<List<DeviceTypeModel>> GetDeviceTypes();
+        Task UpdateDeviceType(DeviceTypeModel deviceType);
     }
 }
