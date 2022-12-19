@@ -5,6 +5,8 @@ namespace ITAMS_DAL.Data
     public interface IDeviceData
     {
         Task CreateDevice(IDeviceModel device);
+        Task CreateDeviceAttachment(string fileName, byte[] data, int deviceId);
+        Task<List<DeviceAttachment>> GetDeviceAttachments(int deviceId);
         Task<IDeviceModel> GetDeviceById(int deviceId);
         Task<List<IDeviceModel>> GetDevices();
         Task<List<IDevicesWithLookupsModel>> GetDevicesWithLookups();

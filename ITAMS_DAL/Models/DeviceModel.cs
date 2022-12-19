@@ -60,7 +60,7 @@ namespace ITAMS_DAL.Models
         public string Model { get; set; }
 
         [Required]
-        [Display(Name = "Manufacturer")]
+        [Display(Name = "Network")]
         [Range(1, int.MaxValue, ErrorMessage = "Value must be greater than 0")]
         public int NetworkId { get; set; }
     }

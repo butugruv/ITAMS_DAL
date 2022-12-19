@@ -65,5 +65,24 @@ namespace ITAMS_DAL.Data
 
             await _dataAccess.SaveData("dbo.spDevices_Create", deviceParameters, _connectionString.SqlConnectionName);
         }
+
+        public async Task CreateDeviceAttachment(string fileName, byte[] data, int deviceId)
+        {
+            var parameters = new
+            {
+                Name = fileName,
+                FileStream = data,
+                DeviceId = deviceId
+            };
+
+            await _dataAccess.SaveData("dbo.spDeviceAttachments_Insert", parameters, _connectionString.SqlConnectionName);
+        }
+
+        public async Task<List<DeviceAttachment>> GetDeviceAttachments(int deviceId)
+        {
+            var deviceAttachments = await _dataAccess.LoadData<DeviceAttachment, dynamic>("dbo.spDeviceAttachments_GetAll", new { DeviceId = deviceId }, _connectionString.SqlConnectionName);
+            return deviceAttachments;
+        }
+
     }
 }
