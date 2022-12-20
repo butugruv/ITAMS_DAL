@@ -104,7 +104,6 @@
     <Build Include="dbo\Stored Procedures\DeviceIps\spDeviceIps_GetByDeviceId.sql" />
     <Build Include="dbo\Stored Procedures\DeviceIps\spDeviceIps_Update.sql" />
     <Build Include="dbo\Stored Procedures\Locations\spLocationFloors_GetLocationFloors.sql" />
-    <Build Include="dbo\Stored Procedures\Devices\spDeviceAttachments_GetAll.sql" />
     <Build Include="dbo\Stored Procedures\Devices\spDeviceAttachments_Insert.sql" />
     <Build Include="dbo\Stored Procedures\Devices\spDevicesWithLookups_GetAll.sql" />
     <Build Include="dbo\Stored Procedures\Networks\spNetworks_Create.sql" />
