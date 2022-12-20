@@ -6,7 +6,7 @@ namespace ITAMS_DAL.Data
     {
         Task CreateDevice(IDeviceModel device);
         Task CreateDeviceAttachment(string fileName, byte[] data, int deviceId);
-        Task DeleteDevice(int Id);
+        Task DeleteDevice(int id);
         Task<List<DeviceAttachment>> GetDeviceAttachments(int deviceId);
         Task<IDeviceModel> GetDeviceById(int deviceId);
         Task<List<IDeviceModel>> GetDevices();
