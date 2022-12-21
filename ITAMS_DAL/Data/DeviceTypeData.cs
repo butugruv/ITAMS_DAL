@@ -25,9 +25,7 @@ namespace ITAMS_DAL.Data
             var deviceTypeParameters = new
             {
                 deviceType.TypeName,
-                deviceType.TypeDescription,
-                deviceType.CreatedDate,
-                deviceType.CreatedBy
+                deviceType.TypeDescription
             };
 
             await _dataAccess.SaveData("dbo.spDeviceTypes_Create", deviceTypeParameters, _connectionString.SqlConnectionName);
@@ -41,6 +39,12 @@ namespace ITAMS_DAL.Data
         public async Task DeleteDeviceType(int id)
         {
             await _dataAccess.SaveData("dbo.spDeviceTypes_Delete", new { Id = id }, _connectionString.SqlConnectionName);
+        }
+
+        public async Task<List<DeviceTypeCountsModel>> GetDeviceTypeCounts()
+        {
+            var deviceTypeCounts = await _dataAccess.LoadData<DeviceTypeCountsModel, dynamic>("dbo.spMetrics_GetDeviceTypeCounts", new { }, _connectionString.SqlConnectionName);
+            return deviceTypeCounts;
         }
     }
 }

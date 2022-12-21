@@ -68,6 +68,7 @@
     <Folder Include="dbo\Stored Procedures\Networks" />
     <Folder Include="dbo\Stored Procedures\DeviceTypes" />
     <Folder Include="dbo\Stored Procedures\Manufacturers" />
+    <Folder Include="dbo\Stored Procedures\Metrics" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Devices.sql" />
@@ -111,6 +112,12 @@
     <Build Include="dbo\Stored Procedures\Networks\spNetworks_GetAll.sql" />
     <Build Include="dbo\Stored Procedures\DeviceTypes\spDeviceTypes_GetAll.sql" />
     <Build Include="dbo\Stored Procedures\Manufacturers\spManufacturers_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\Metrics\spMetrics_GetDeviceTypeCounts.sql" />
+    <Build Include="dbo\Views\Device_Type_Counts_vw.sql" />
+    <Build Include="dbo\Stored Procedures\DeviceTypes\spDeviceTypes_Create.sql" />
+    <Build Include="dbo\Stored Procedures\DeviceTypes\spDeviceTypes_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Networks\spNetworks_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\DeviceTypes\spDeviceTypes_Delete.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITAMS_DB.refactorlog" />

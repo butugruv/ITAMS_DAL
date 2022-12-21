@@ -6,6 +6,7 @@ namespace ITAMS_DAL.Data
     {
         Task CreateDeviceType(DeviceTypeModel deviceType);
         Task DeleteDeviceType(int id);
+        Task<List<DeviceTypeCountsModel>> GetDeviceTypeCounts();
         Task<List<DeviceTypeModel>> GetDeviceTypes();
         Task UpdateDeviceType(DeviceTypeModel deviceType);
     }
