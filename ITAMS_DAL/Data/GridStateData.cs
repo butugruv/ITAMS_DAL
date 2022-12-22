@@ -20,6 +20,12 @@ namespace ITAMS_DAL.Data
             return gridStates;
         }
 
+        public async Task<GridStateModel> GetGridStateById(int gridStateId)
+        {
+            var gridStates = await _dataAccess.LoadData<GridStateModel, dynamic>("dbo.spGridStates_GetById", new { Id = gridStateId }, _connectionString.SqlConnectionName);
+            return gridStates.FirstOrDefault();
+        }
+
         public async Task CreateGridState(GridStateModel gridState)
         {
             var gridStateParameters = new
